@@ -1,4 +1,4 @@
-package main
+package twoSum
 
 // twoSum 在整数数组 nums 中找出两个数，使它们的和等于 target，
 // 并返回这两个数的下标（按出现顺序）。
