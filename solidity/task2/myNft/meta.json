@@ -1,0 +1,15 @@
+{
+  "name": "My First NFT",
+  "description": "A beautiful sunset over the mountains, created on Nov 2025.",
+  "image": "ipfs://bafkreicya6vug6emantjnbmpc3b7oaghgjvwcwan7fl5tsupdas5vyenmy",
+  "attributes": [
+    {
+      "trait_type": "Artist",
+      "value": "qiqiqiking"
+    },
+    {
+      "trait_type": "Year",
+      "value": "2025"
+    }
+  ]
+}
