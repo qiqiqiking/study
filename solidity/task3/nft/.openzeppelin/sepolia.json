@@ -1,0 +1,251 @@
+{
+  "manifestVersion": "3.2",
+  "proxies": [
+    {
+      "address": "0x77907BeAaBd20626C0ac8E4585Cb12f1fD26CEb6",
+      "txHash": "0x29f2a9dbc2e8bf95a5c8fd4d6c192eabe008b86d1b160a4f0c33f5f19bea9377",
+      "kind": "uups"
+    },
+    {
+      "address": "0x7Df62a8e3fa3aC3AD1b8c16bcbdB1189d38fAEdC",
+      "txHash": "0x00293f1e0b757dba548eb8bfb1273a05a8d112271cf4c491e9663399702f58cb",
+      "kind": "uups"
+    },
+    {
+      "address": "0xD74321F80d23093b5A3341b08de5AF17275bAFBD",
+      "txHash": "0xe89ef96a65be930acd8d48d8aa28ca245bb18e792b14a9c0c3d9d09bfa69f350",
+      "kind": "uups"
+    }
+  ],
+  "impls": {
+    "d294c833b66698ca427fc4f9c476d20577ac0dca4b9203c49e60ec9f360df7d4": {
+      "address": "0x75703C1c7FF2b7205D75BD8bcD94516c363Ec661",
+      "txHash": "0xb16b640482ae4aab2a97443dcc1b1083e4f52c2092b2b4eeba8b387ca0946db8",
+      "layout": {
+        "solcVersion": "0.8.21",
+        "storage": [
+          {
+            "label": "_initialized",
+            "offset": 0,
+            "slot": "0",
+            "type": "t_uint8",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:63",
+            "retypedFrom": "bool"
+          },
+          {
+            "label": "_initializing",
+            "offset": 1,
+            "slot": "0",
+            "type": "t_bool",
+            "contract": "Initializable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/Initializable.sol:68"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "1",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ERC1967UpgradeUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/ERC1967/ERC1967UpgradeUpgradeable.sol:169"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "51",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "UUPSUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/proxy/utils/UUPSUpgradeable.sol:111"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "101",
+            "type": "t_array(t_uint256)50_storage",
+            "contract": "ContextUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol:40"
+          },
+          {
+            "label": "_owner",
+            "offset": 0,
+            "slot": "151",
+            "type": "t_address",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:22"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "152",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "OwnableUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/access/OwnableUpgradeable.sol:94"
+          },
+          {
+            "label": "_status",
+            "offset": 0,
+            "slot": "201",
+            "type": "t_uint256",
+            "contract": "ReentrancyGuardUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol:38"
+          },
+          {
+            "label": "__gap",
+            "offset": 0,
+            "slot": "202",
+            "type": "t_array(t_uint256)49_storage",
+            "contract": "ReentrancyGuardUpgradeable",
+            "src": "@openzeppelin/contracts-upgradeable/security/ReentrancyGuardUpgradeable.sol:88"
+          },
+          {
+            "label": "auctions",
+            "offset": 0,
+            "slot": "251",
+            "type": "t_mapping(t_bytes32,t_struct(Auction)4904_storage)",
+            "contract": "NFTAuction",
+            "src": "contracts/NFTAuction.sol:32"
+          },
+          {
+            "label": "bidUsdValue",
+            "offset": 0,
+            "slot": "252",
+            "type": "t_mapping(t_bytes32,t_uint256)",
+            "contract": "NFTAuction",
+            "src": "contracts/NFTAuction.sol:33"
+          },
+          {
+            "label": "ethUsdFeed",
+            "offset": 0,
+            "slot": "253",
+            "type": "t_address",
+            "contract": "NFTAuction",
+            "src": "contracts/NFTAuction.sol:36"
+          },
+          {
+            "label": "erc20UsdFeed",
+            "offset": 0,
+            "slot": "254",
+            "type": "t_address",
+            "contract": "NFTAuction",
+            "src": "contracts/NFTAuction.sol:37"
+          },
+          {
+            "label": "erc20Decimals",
+            "offset": 20,
+            "slot": "254",
+            "type": "t_uint8",
+            "contract": "NFTAuction",
+            "src": "contracts/NFTAuction.sol:38"
+          }
+        ],
+        "types": {
+          "t_address": {
+            "label": "address",
+            "numberOfBytes": "20"
+          },
+          "t_address_payable": {
+            "label": "address payable",
+            "numberOfBytes": "20"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]",
+            "numberOfBytes": "1568"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]",
+            "numberOfBytes": "1600"
+          },
+          "t_bool": {
+            "label": "bool",
+            "numberOfBytes": "1"
+          },
+          "t_bytes32": {
+            "label": "bytes32",
+            "numberOfBytes": "32"
+          },
+          "t_contract(IERC20Upgradeable)1048": {
+            "label": "contract IERC20Upgradeable",
+            "numberOfBytes": "20"
+          },
+          "t_mapping(t_bytes32,t_struct(Auction)4904_storage)": {
+            "label": "mapping(bytes32 => struct NFTAuction.Auction)",
+            "numberOfBytes": "32"
+          },
+          "t_mapping(t_bytes32,t_uint256)": {
+            "label": "mapping(bytes32 => uint256)",
+            "numberOfBytes": "32"
+          },
+          "t_struct(Auction)4904_storage": {
+            "label": "struct NFTAuction.Auction",
+            "members": [
+              {
+                "label": "nftContract",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "0"
+              },
+              {
+                "label": "tokenId",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "1"
+              },
+              {
+                "label": "seller",
+                "type": "t_address",
+                "offset": 0,
+                "slot": "2"
+              },
+              {
+                "label": "highestBidder",
+                "type": "t_address_payable",
+                "offset": 0,
+                "slot": "3"
+              },
+              {
+                "label": "highestBid",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "4"
+              },
+              {
+                "label": "isEth",
+                "type": "t_bool",
+                "offset": 0,
+                "slot": "5"
+              },
+              {
+                "label": "erc20Token",
+                "type": "t_contract(IERC20Upgradeable)1048",
+                "offset": 1,
+                "slot": "5"
+              },
+              {
+                "label": "endTime",
+                "type": "t_uint256",
+                "offset": 0,
+                "slot": "6"
+              },
+              {
+                "label": "settled",
+                "type": "t_bool",
+                "offset": 0,
+                "slot": "7"
+              }
+            ],
+            "numberOfBytes": "256"
+          },
+          "t_uint256": {
+            "label": "uint256",
+            "numberOfBytes": "32"
+          },
+          "t_uint8": {
+            "label": "uint8",
+            "numberOfBytes": "1"
+          }
+        },
+        "namespaces": {}
+      }
+    }
+  }
+}
