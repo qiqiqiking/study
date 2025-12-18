@@ -16,9 +16,9 @@ contract QQQStaking is
     PausableUpgradeable,
     AccessControlUpgradeable
 {
-    using SafeERC20 for IERC20;
-    using Address for address;
-    using Math for uint256;
+    using SafeERC20 for IERC20; //安全操作 ERC20 代币（防兼容性问题）
+    using Address for address; //安全发送 ETH + 判断是否为合约
+    using Math for uint256;  //安全/便捷的数学运算（max, min, ceilDiv 等）
 
     bytes32 public constant ADMIN_ROLE = keccak256("admin_role"); //业务管理员角色 被 onlyRole(ADMIN_ROLE) 修饰符保护的函数，只有被授予此角色的地址才能调用。
     bytes32 public constant UPGRADE_ROLE = keccak256("upgrade_role");//控制合约升级权限
