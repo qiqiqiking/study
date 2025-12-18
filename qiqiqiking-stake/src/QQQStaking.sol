@@ -17,7 +17,11 @@ contract QQQStaking is
     AccessControlUpgradeable
 {
     using SafeERC20 for IERC20; //安全操作 ERC20 代币（防兼容性问题）
-    using Address for address; //安全发送 ETH + 判断是否为合约
+    //IERC20(pool_.stTokenAddress).safeTransferFrom(
+    //    msg.sender,
+    //    address(this),
+    //    _amount
+    //);
     using Math for uint256;  //安全/便捷的数学运算（max, min, ceilDiv 等）
 
     bytes32 public constant ADMIN_ROLE = keccak256("admin_role"); //业务管理员角色 被 onlyRole(ADMIN_ROLE) 修饰符保护的函数，只有被授予此角色的地址才能调用。
@@ -36,5 +40,8 @@ contract QQQStaking is
     }
 
 
-
+    struct UnstakeRequest {
+        uint256 amount; // 用户取消质押的代币数量，要取出多少个 token
+        uint256 unlockBlocks; // 解质押的区块高度
+    }
 }
