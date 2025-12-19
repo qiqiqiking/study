@@ -39,9 +39,9 @@ contract DeployScript is Script {
         bytes memory initData = abi.encodeWithSelector(
             QQQStaking.initialize.selector,
             address(qqq),    // 1. _QQQ
-            _startBlock,     // 2. _startBlock (注意这里!)
-            _endBlock,       // 3. _endBlock   (注意这里!)
-            _rewardPerBlock  // 4. _QQQPerBlock(注意这里!)
+            _startBlock,     // 2. _startBlock
+            _endBlock,       // 3. _endBlock
+            _rewardPerBlock  // 4. _QQQPerBlock
         );
 
         // 部署代理合约，指向逻辑合约，并执行 initialize
