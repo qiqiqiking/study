@@ -6,11 +6,11 @@ import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
 
 /// @title QQQKING Token
 /// @author qiqiqi
-contract QQQKING is ERC20, Ownable {
+contract QQQ is ERC20, Ownable {
     uint8 private constant _DECIMALS = 18;
     uint256 private constant INITIAL_SUPPLY = 1_000_000_000 * 10 ** _DECIMALS; // 1 billion tokens
 
-    constructor() ERC20("QQQKING", "QQQKING") Ownable(msg.sender) {
+    constructor() ERC20("QQQ", "QQQ") Ownable(msg.sender) {
         _mint(msg.sender, INITIAL_SUPPLY);
     }
 

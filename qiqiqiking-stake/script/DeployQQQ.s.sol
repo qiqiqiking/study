@@ -2,15 +2,15 @@
 pragma solidity ^0.8.30;
 
 import "forge-std/Script.sol";
-import "../src/QQQKING.sol";
+import "../src/QQQ.sol";
 
 contract DeployQQQ is Script {
-    function run() external returns (QQQKING) {
+    function run() external returns (QQQ) {
         vm.startBroadcast();
-        QQQKING token = new QQQKING();
+        QQQ token = new QQQ();
         vm.stopBroadcast();
 
-        console.log("✅ QQQKING token deployed to:", address(token));
+        console.log("QQQ token deployed to:", address(token));
         return token;
     }
 }
