@@ -14,21 +14,15 @@ contract DeployScript is Script {
 
         vm.startBroadcast(deployerPrivateKey);
 
-        // ==========================================
         // 第一步：部署 QQQ 代币 (奖励代币)
-        // ==========================================
         QQQ qqq = new QQQ();
         console.log("QQQ Token Deployed at:", address(qqq));
 
-        // ==========================================
         // 第二步：部署 Staking 逻辑合约 (Implementation)
-        // ==========================================
         QQQStaking implementation = new QQQStaking();
         console.log("Implementation Deployed at:", address(implementation));
 
-        // ==========================================
         // 第三步：准备初始化参数并部署代理合约 (Proxy)
-        // ==========================================
 
         // 设置初始化参数
         uint256 _rewardPerBlock = 10 ether; // 每个区块奖励 10 QQQ
@@ -51,18 +45,14 @@ contract DeployScript is Script {
         QQQStaking staking = QQQStaking(address(proxy));
         console.log("Staking Proxy (User interacts here) at:", address(staking));
 
-        // ==========================================
         // 第四步：后续设置 (资金注入 & 权限)
-        // ==========================================
 
         // 1. 转账 QQQ 到 Staking 合约用于发奖励
-        // 注意：因为是你部署的 QQQ，初始供应量通常在部署者手里
         uint256 fundingAmount = 1000000 ether;
         qqq.transfer(address(staking), fundingAmount);
         console.log("Transferred", fundingAmount, "QQQ to Staking Contract");
 
         // 2. 添加 ETH 池 (Pool ID 0)
-        // 注意：根据你的代码逻辑，必须有 Pool 0 才能运作
         staking.addPool(address(0), 100, 1, 10, true);
         console.log("Added ETH Pool (PID 0)");
 
